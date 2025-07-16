@@ -1,6 +1,7 @@
 streamlit
 openai
-langchain
+langchain==0.1.14
+langchain_community==0.0.19
 python-dotenv
 requests
 twilio

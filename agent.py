@@ -1,7 +1,7 @@
 
 import os
 from dotenv import load_dotenv
-from langchain.chat_models import ChatOpenAI
+from langchain.llms import OpenAI
 from langchain.agents import Tool, initialize_agent
 from astro_tools import get_daily_horoscope
 
@@ -14,7 +14,7 @@ tool = Tool(
     description="Gets today's horoscope for a given sun sign"
 )
 
-llm = ChatOpenAI(temperature=0.6, model_name="gpt-3.5-turbo", openai_api_key=os.getenv("OPENAI_API_KEY"))
+llm = OpenAI(temperature=0.6, openai_api_key=os.getenv("OPENAI_API_KEY"))
 
 agent = initialize_agent(
     tools=[tool],

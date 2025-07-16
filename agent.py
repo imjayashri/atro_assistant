@@ -1,7 +1,7 @@
 
 import os
 from dotenv import load_dotenv
-from langchain_community.chat_models import ChatOpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.agents import Tool, initialize_agent
 from astro_tools import get_daily_horoscope
 

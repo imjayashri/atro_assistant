@@ -14,7 +14,7 @@ tool = Tool(
     description="Gets today's horoscope for a given sun sign"
 )
 
-llm = ChatOpenAI(temperature=0.6)
+llm = ChatOpenAI(temperature=0.6, openai_api_key=os.getenv("OPENAI_API_KEY"))
 
 agent = initialize_agent(
     tools=[tool],
